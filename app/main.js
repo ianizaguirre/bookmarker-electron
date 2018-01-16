@@ -1,1 +1,12 @@
-console.log('Hello World!');
+//const electron = require('electron');
+
+//console.log(Object.keys(electron));
+
+
+const { app, BrowserWindow } = require('electron');
+
+app.on('ready', () => {
+  const mainWindow = new BrowserWindow();
+  mainWindow.loadURL(`file://${__dirname}/index.html`);
+});
+
