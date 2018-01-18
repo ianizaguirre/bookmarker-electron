@@ -12,6 +12,10 @@ newLinkForm.addEventListener('submit', () => {
 
   const url = newLinkUrl.value;
 
-  console.log(url);
+  // console.log(url);
+
+  fetch(url)
+    .then(response => response.text())
+    .then(response => console.log(response))
 
 });
